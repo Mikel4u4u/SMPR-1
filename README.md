@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<base href="http://www.megasite.ru/hzchd/">
+<base href="https://github.com/PavlyukovVladimir/SMPR/blob/master/">
 # Классифицирующие алгоритмы
 ## Навигация
 <a href="Vvonyye_opredeleniya">Вводные определения</a>
