@@ -2,7 +2,9 @@
 <html>
 <head>
   <base href="https://github.com/PavlyukovVladimir/SMPR/blob/master/"></base>
-  <link rel="stylesheet" type="text/css" href="style/style.css" >
+  <style type="text/css">
+   ...
+  </style>
 </head>
 <body>
   
