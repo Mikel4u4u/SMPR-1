@@ -3,7 +3,22 @@
 <head>
   <base href="https://github.com/PavlyukovVladimir/SMPR/blob/master/"></base>
   <style type="text/css">
-   ...
+   .formula span{
+      display: inline-block;
+    }
+    .formula span sup, .formula span sub {
+      display: block;
+      font-size: 65%;
+      line-height: 0;
+      position: relative;
+      vertical-align: baseline;
+    }
+    .formula span sup {
+      top: -0.6em;
+    }
+    .formula span sub {
+      top: 0.4em;
+    }
   </style>
 </head>
 <body>
