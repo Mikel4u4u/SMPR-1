@@ -52,7 +52,7 @@
   <p>Посмотрим как они работают на выборке <a href="https://ru.wikipedia.org/wiki/Ирисы_Фишера"; target="_blank">ирисов фишера</a>.</p>
   <p>Для иллюстрации методов, достаточно производить обучение и классификацию используя лишь 2 признака: «длинна лепестка» и «ширина лепестка».</p>
   <p>Листинг скрипта на R:</p>
-  <p><listing><?php echo file_get_contents('myfile.txt') ?></listing></p>
+  <p><listing><?php echo file_get_contents('scripts/script_1NN_kNN.R') ?></listing></p>
   <p></p>
   <p></p>
   <p></p>
