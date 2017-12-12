@@ -11,7 +11,7 @@
   <p><a href="#Vvonyye_opredeleniya">Вводные определения</a></p>
   <p><a href="#Metricheskiye_algoritmy">Метрические алгоритмы</a></p>
   <p><a href="#a1NN">1NN</a></p>
-  <p><a href="#akNN">1NN</a></p>
+  <p><a href="#akNN">kNN</a></p>
   
   ## Вводные определения <a name="Vvonyye_opredeleniya"></a>
   
