@@ -54,6 +54,7 @@
   <p>Посмотрим как они работают на выборке <a href="https://ru.wikipedia.org/wiki/Ирисы_Фишера"; target="_blank">ирисов фишера</a>.</p>
   <p>Для иллюстрации методов, достаточно производить обучение и классификацию используя лишь 2 признака: «длинна лепестка» и «ширина лепестка».</p>
   <p>Листинг скрипта на R:<a href='https://github.com/PavlyukovVladimir/SMPR/blob/master/scripts/script_1NN_kNN.R'>script_1NN_kNN.R</a></p>
+  <p><img src="img/Rplot.jpeg" alt="результат работы 1NN и kNN"></p>
   <p></p>
   <p></p>
   <p></p>
