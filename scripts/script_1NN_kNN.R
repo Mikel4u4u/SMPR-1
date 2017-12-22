@@ -73,25 +73,26 @@
 	dlinna_vyborki <- dim(Xl)[1]
 
 	tcveta = topo.colors( length(klassy) )#создает вектор цветов
-	points = rbind( #несколько точек для классификации
-		c(5, 3),
-		c(6.3, 5),
-		c(8, 3.5),
-		c(5, 2.5),
-		c(7.5,2),
-		c(6,5.25)
-	)
-
 	# график 1NN
-		plot(Xl[,N[1]], Xl[,N[2]], col = tcveta[Xl[,nomer_stolbtca_classov]], xlab = "", ylab = "",main = "1NN")
-		for (i in 1:dim(points)[1]) {
-			pt = points[i,]
-			points(pt[1], pt[2], col = tcveta[NN(pt, Xl, N, nomer_stolbtca_classov )], pch = 15) 
-		}
-
+		plot(Xl[,N[1]], Xl[,N[2]], col = tcveta[Xl[,nomer_stolbtca_classov]], xlab = "", ylab = "",main = "1NN",pch = 20)
+	#классифицируем все точки видимой области первого графика с шагом (0.1, 0.1)    
+		w<-3.9
+    		while(w<8.2){
+      			h=0.8
+      			while(h<7.2){
+        			points(w, h, col = tcveta[NN(c(w,h), Xl, N, nomer_stolbtca_classov )], pch = 1)
+        			h=h+0.1
+      			}
+      			w=w+0.1
+    		}
 	# график kNN
-		plot(Xl[,N[1]], Xl[,N[2]], col = tcveta[Xl[,nomer_stolbtca_classov]], xlab = "", ylab = "",main = "kNN")
-		for (i in 1:dim(points)[1]) {
-			pt = points[i,]
-			points(pt[1], pt[2], col = tcveta[kNN(pt, 7, Xl, N, nomer_stolbtca_classov )], pch = 15) 
+		plot(Xl[,N[1]], Xl[,N[2]], col = tcveta[Xl[,nomer_stolbtca_classov]], xlab = "", ylab = "",main = "kNN",pch = 20)
+		w<-3.9
+		while(w<8.2){
+			h=0.8
+			while(h<7.2){
+				points(w, h, col = tcveta[kNN(c(w,h), 7, Xl, N, nomer_stolbtca_classov )], pch = 1)
+				h=h+0.1
+			}
+			w=w+0.1
 		}
