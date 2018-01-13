@@ -48,6 +48,12 @@ a = function(x, classes, Py, myus, sigmas) {
 }
 
 tcveta = c("red", "green", "blue")#создает вектор цветов
+#процент ошибки алгоритма
+l<-dim(Xl)[1]
+e<-0.0
+for(i in 1:l){
+  e<-e+100*(Xl[,nomer_stolbtca_classov][i]!=classes[a(c(Xl[,1][i],Xl[,2][i]), classes, Py, myus, sigmas )])/l
+}
 # график
 plot(Xl[,1], Xl[,2], col = tcveta[Xl[,nomer_stolbtca_classov]], xlab = "", ylab = "",main = "Наивный Байесовский классификатор",pch = 20)
 #классифицируем все точки видимой области первого графика с шагом (0.1, 0.1)    
@@ -63,9 +69,4 @@ while(w<w_max){
     h=h+0.1
   }
   w=w+0.1
-}
-l<-dim(Xl)[1]
-e<-0.0
-for(i in 1:l){
-  e<-e+100*(Xl[,nomer_stolbtca_classov][i]!=classes[a(c(Xl[,1][i],Xl[,2][i]), classes, Py, myus, sigmas )])/l
 }
