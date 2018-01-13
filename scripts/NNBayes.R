@@ -47,15 +47,16 @@ a = function(x, classes, Py, myus, sigmas) {
   which.max(scores)#порядковый номер максимальной вероятности
 }
 
-tcveta = c("red", "green", "blue")#создает вектор цветов
-#процент ошибки алгоритма
+#процент ошибки классификации
 l<-dim(Xl)[1]
 e<-0.0
 for(i in 1:l){
   e<-e+100*(Xl[,nomer_stolbtca_classov][i]!=classes[a(c(Xl[,1][i],Xl[,2][i]), classes, Py, myus, sigmas )])/l
 }
+
+tcveta = c("red", "green", "blue")#создает вектор цветов
 # график
-plot(Xl[,1], Xl[,2], col = tcveta[Xl[,nomer_stolbtca_classov]], xlab = "", ylab = "",main = "Наивный Байесовский классификатор",pch = 20)
+plot(Xl[,1], Xl[,2], col = tcveta[Xl[,nomer_stolbtca_classov]], xlab = "", ylab = "",main = paste("Наивный Байесовский классификатор (процент ошибки ",round(e,digits=2),"%)"),pch = 20)
 #классифицируем все точки видимой области первого графика с шагом (0.1, 0.1)    
 w_min<-min(Xl[,1])-0.1
 w_max<-max(Xl[,1])+0.1
