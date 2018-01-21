@@ -16,8 +16,8 @@
   <p><a href="#Bayesophskiye_klassiphikatory">3. Байесовские классификаторы</a></p>
   <p><a href="#Naivnyy_bayesophskiy_klassiphikator">3.1. &#171Наивный&#187 байесовский классификатор</a></p>
   <p><a href="#Lineynyye_klassiphikatory">4. Линейные алгоритмы классификации</a></p>
-  <p><a href="#SG">4. Метод стохастического градиента.</a></p>
-  <p><a href="#ADALINE">4. ADALINE.</a></p>
+  <p><a href="#SG">4.1. Метод стохастического градиента.</a></p>
+  <p><a href="#ADALINE">4.1.1 ADALINE.</a></p>
   
   ## 1. Вводные определения <a name="Vvonyye_opredeleniya"></a>
   
@@ -114,9 +114,9 @@ P<sub>y</sub> = P(y) называются априорными вероятно�
 
   ## 4. Линейные алгоритмы классификации.  <a name="Lineynyye_klassiphikatory"></a>
   
-  ### 4. Метод стохастического градиента.  <a name="SG"></a>
+  ### 4.1. Метод стохастического градиента.  <a name="SG"></a>
   
-  ### 4. ADALINE.  <a name="ADALINE"></a>
+  ### 4.1.1 ADALINE.  <a name="ADALINE"></a>
   
 <p>Вынесенные в отдельный файл функции для ADALINE:<a href='https://github.com/PavlyukovVladimir/SMPR/blob/master/scripts/SG_funktcii.R'>SG_funktcii.R</a></p>
 <p>Листинг скрипта на R реализующий алгоритм классификации ADALINE:<a href='https://github.com/PavlyukovVladimir/SMPR/blob/master/scripts/SG.R'>SG.R</a></p>
