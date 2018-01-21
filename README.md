@@ -123,7 +123,7 @@ P<sub>y</sub> = P(y) называются априорными вероятно�
 <p>Листинг скрипта на R реализующий алгоритм классификации ADALINE:<a href='https://github.com/PavlyukovVladimir/SMPR/blob/master/scripts/SG.R'>SG.R</a></p>
 <p><img src="img/ADALINE.jpg" alt="Визуализация ADALINE"></p>
 
-### 4.1.1 Персептрон Розенблатта.  <a name="Perseptron"></a>
+### 4.1.2 Персептрон Розенблатта.  <a name="Perseptron"></a>
 
 <p>Вынесенные в отдельный файл функции для Персептрона:<a href='https://github.com/PavlyukovVladimir/SMPR/blob/master/scripts/SG_funktcii.R'>PRozenblata_functions.R</a></p>
 <p>Листинг скрипта на R реализующий алгоритм классификации Персептрона Розенблата на основе правила Хэбба:<a href='https://github.com/PavlyukovVladimir/SMPR/blob/master/scripts/SG.R'>PRozenblata.R</a></p>
