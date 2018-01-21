@@ -120,5 +120,6 @@ P<sub>y</sub> = P(y) называются априорными вероятно�
   
 <p>Вынесенные в отдельный файл функции для ADALINE:<a href='https://github.com/PavlyukovVladimir/SMPR/blob/master/scripts/SG_funktcii.R'>SG_funktcii.R</a></p>
 <p>Листинг скрипта на R реализующий алгоритм классификации ADALINE:<a href='https://github.com/PavlyukovVladimir/SMPR/blob/master/scripts/SG.R'>SG.R</a></p>
+<p><img src="img/ADALINE.jpg" alt="Визуализация ADALINE"></p>
 </body>
 </html>
