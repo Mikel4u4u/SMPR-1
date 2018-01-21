@@ -11,7 +11,7 @@ f_to_M=function(Xl,v_p,v_c){
   Xl[,dim(Xl)[2]]=ifelse(Xl[,dim(Xl)[2]]==classes[1],1,-1)
   as.matrix(Xl)
 }
-#max и min во всехт столбцах кроме последнего
+#max и min во всех столбцах кроме последнего
 max_elements=function(Xl){
   apply(Xl[,-dim(Xl)[2]],2,"max")
 }
@@ -41,7 +41,6 @@ Eta = function(I){
   #   }
   # }else{1/2}
   1/I
-  0.5
 }
 #Параметр сглаживания
 lyambda=function(l){
@@ -60,20 +59,10 @@ M=function(x,y,w){
 L_ADALINE=function(x,y,w,m=M){
   (m(x,y,w)-1)^2
 }
-#заглушка
-#Персептрона
-L_HEB=function(x,y,w,m=M){
-  1
-}
 #производная функции потерь
 #ADALINE 2*(M-1)
 dL_ADALINE=function(x,y,w){
   2*(M(x,y,w)-1)
-}
-#заглушка
-#Персептрона
-dL_HEB=function(x,y,w){
-  1
 }
 #Оценка функционала
 Q=function(Xl,w,f){
