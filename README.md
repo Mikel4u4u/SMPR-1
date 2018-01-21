@@ -125,9 +125,9 @@ P<sub>y</sub> = P(y) называются априорными вероятно�
 
 ### 4.1.2 Персептрон Розенблатта.  <a name="Perseptron"></a>
 
-<p>Вынесенные в отдельный файл функции для Персептрона:<a href='https://github.com/PavlyukovVladimir/SMPR/blob/master/scripts/SG_funktcii.R'>PRozenblata_functions.R</a></p>
-<p>Листинг скрипта на R реализующий алгоритм классификации Персептрона Розенблата на основе правила Хэбба:<a href='https://github.com/PavlyukovVladimir/SMPR/blob/master/scripts/SG.R'>PRozenblata.R</a></p>
+<p>Вынесенные в отдельный файл функции для Персептрона:<a href='https://github.com/PavlyukovVladimir/SMPR/blob/master/scripts/PRozenblata_functions.R'>PRozenblata_functions.R</a></p>
+<p>Листинг скрипта на R реализующий алгоритм классификации Персептрона Розенблата на основе правила Хэбба:<a href='https://github.com/PavlyukovVladimir/SMPR/blob/master/scripts/PRozenblata.R'>PRozenblata.R</a></p>
 <p><img src="img/Perseptron.jpg" alt="Визуализация Персептрона"></p>
-<p>Листинг скрипта на R с помощью которгого можно протестировать работу алгоритма:<a href='https://github.com/PavlyukovVladimir/SMPR/blob/master/scripts/SG.R'>test_PRozenblata.R</a></p>
+<p>Листинг скрипта на R с помощью которгого можно протестировать работу алгоритма:<a href='https://github.com/PavlyukovVladimir/SMPR/blob/master/scripts/test_PRozenblata.R'>test_PRozenblata.R</a></p>
 </body>
 </html>
