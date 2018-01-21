@@ -33,14 +33,14 @@ norm=function(Xl,ma,mi){
 }
 #Зависимость темпа обучения от итераций
 Eta = function(I){
-  # if(I){
-  #   if(I>10){
-  #     1/(2*log(I,10))
-  #   }else{
-  #     1/(2*I)
-  #   }
-  # }else{1/2}
-  1/I
+  if(I){
+    if(I>10){
+      1/log(I,10)
+    }else{
+      1/I
+    }
+  }else{1/2}
+  #1/I
 }
 #Параметр сглаживания
 lyambda=function(l){
