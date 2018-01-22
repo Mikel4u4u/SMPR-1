@@ -15,6 +15,7 @@
   <p><a href="#Loo_akNN">2.3. LOO для kNN</a></p>
   <p><a href="#Bayesophskiye_klassiphikatory">3. Байесовские классификаторы</a></p>
   <p><a href="#Naivnyy_bayesophskiy_klassiphikator">3.1. &#171Наивный&#187 байесовский классификатор</a></p>
+  <p><a href="#plug_in">3.1. &Классификатор plug-in</a></p>
   <p><a href="#Lineynyye_klassiphikatory">4. Линейные алгоритмы классификации</a></p>
   <p><a href="#SG">4.1. Метод стохастического градиента.</a></p>
   <p><a href="#ADALINE">4.1.1 ADALINE.</a></p>
