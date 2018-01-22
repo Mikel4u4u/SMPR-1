@@ -50,7 +50,7 @@ Ng=function(x,myu,E){
   exp(k)/sqrt((2*pi)^n*det(E))
 }
 
-#Наивный классификатор
+#классификатор
 a = function(x, classes, Py, myus, E) {
   Y = length(classes)#количество классов
   n = dim(x)[2]#количество признаков
