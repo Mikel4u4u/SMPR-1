@@ -24,28 +24,35 @@
 			sqrt(sum((t1 - t2)^2))                  #как будто значения параметров являются координатами
 		}
 	#метод сортировки
-		otsortirovat_vyborky = function(klassyfitcyruyemyy_element,vyborka,vector_priznakov, po_ubyvaniyu = FALSE, funktciya_vesov = poschitat_rasstoyanie){
-		#возвращает отсортированную выборку по возрастанию(по умолчанию подставив TRUE отсортируем по убыванию) весов(расстояний) ее элементов относительно классифицируемого элемента
+		otsortirovat_vyborky = function(klassyfitcyruyemyy_element,vyborka,vector_priznakov,
+						po_ubyvaniyu = FALSE, funktciya_vesov = poschitat_rasstoyanie){
+		#возвращает отсортированную выборку по возрастанию(по умолчанию подставив TRUE отсортируем по убыванию)
+		#весов(расстояний) ее элементов относительно классифицируемого элемента
 			dlinna_vyborki = dim(vyborka)[1]
 			matritca_rasstoyaniy = matrix(0,dlinna_vyborki,2)#содержит нули,нужна для хранения весов выборки относительно u
 			for (i in 1:dlinna_vyborki) {
-				matritca_rasstoyaniy[i,] = c(funktciya_vesov(klassyfitcyruyemyy_element, vyborka[i,][vector_priznakov]), i)
+			    matritca_rasstoyaniy[i,] = c(funktciya_vesov(klassyfitcyruyemyy_element, vyborka[i,][vector_priznakov]), i)
 			}
 			vyborka[order(matritca_rasstoyaniy[,1],decreasing = po_ubyvaniyu),]
 		}
 	#методы классификации:
-		NN = function(klassyfitcyruyemyy_element,vyborka, vector_priznakov,nomer_stolbtca_classov,funktciya_rasstoyaniy=poschitat_rasstoyanie) {
-			sortirovannaya_vyborka = otsortirovat_vyborky(klassyfitcyruyemyy_element,vyborka,vector_priznakov,FALSE,funktciya_rasstoyaniy)
+		NN = function(klassyfitcyruyemyy_element,vyborka, vector_priznakov,nomer_stolbtca_classov,
+			      funktciya_rasstoyaniy=poschitat_rasstoyanie) {
+			sortirovannaya_vyborka = otsortirovat_vyborky(klassyfitcyruyemyy_element,vyborka,vector_priznakov,
+								      FALSE,funktciya_rasstoyaniy)
 			sortirovannaya_vyborka[1,nomer_stolbtca_classov]
 		}
 
-		kNN = function(klassyfitcyruyemyy_element,k,vyborka, vector_priznakov,nomer_stolbtca_classov,funktciya_rasstoyaniy=poschitat_rasstoyanie) {
-			sortirovannaya_vyborka = otsortirovat_vyborky(klassyfitcyruyemyy_element,vyborka,vector_priznakov,FALSE,funktciya_rasstoyaniy)
+		kNN = function(klassyfitcyruyemyy_element,k,vyborka, vector_priznakov,nomer_stolbtca_classov,
+			       funktciya_rasstoyaniy=poschitat_rasstoyanie) {
+			sortirovannaya_vyborka = otsortirovat_vyborky(klassyfitcyruyemyy_element,vyborka,
+								      vector_priznakov,FALSE,funktciya_rasstoyaniy)
 			klassy = poluchit_klassy(vyborka,nomer_stolbtca_classov)
 			blizost <- rep(0,times = length(klassy))
 			names(blizost) <- klassy
 			for (i in 1:k) {
-				blizost[sortirovannaya_vyborka[i,nomer_stolbtca_classov]] <- (blizost[sortirovannaya_vyborka[i,nomer_stolbtca_classov]] + 1)
+				blizost[sortirovannaya_vyborka[i,nomer_stolbtca_classov]] <- 
+				(blizost[sortirovannaya_vyborka[i,nomer_stolbtca_classov]] + 1)
 			}
 			max = 1
 			for (i in 1:length(blizost)) {
@@ -53,10 +60,11 @@
 				max <- i
 				}
 			}
-			vyborka[vyborka$Species == klassy[max],][1,nomer_stolbtca_classov]#такие сложности для того, чтобы возвращался фрейм, а не строка
-													#klassy[max] вернет строку с названием наиболее часто встречающегося класса
-													#vyborka[vyborka$Species == klassy[max],] фрейм содержащий только 1 класс
-													#vyborka[vyborka$Species == klassy[max],][1,nomer_stolbtca_classov] фрейм содержащий название класса
+			vyborka[vyborka$Species == klassy[max],][1,nomer_stolbtca_classov]#такие сложности для того, чтобы
+				#возвращался фрейм, а не строка
+				#klassy[max] вернет строку с названием наиболее часто встречающегося класса
+				#vyborka[vyborka$Species == klassy[max],] фрейм содержащий только 1 класс
+				#vyborka[vyborka$Species == klassy[max],][1,nomer_stolbtca_classov] фрейм содержащий название класса
 		}
 #Визуализация:
 	par(mfrow = c(2,1))#   Функция par() изменяет постоянные графические параметры,
@@ -65,7 +73,7 @@
 		#как матрицу из nr строк и nc столбцов, графики тогда рисуются в строках
 
 	poluchit_klassy = function(vyborka,nomer_stolbtca_classov){#если я прав, то обьединение вектора названий классов
-															   #с самим собой должно удалить одинаковые элементы
+								#с самим собой должно удалить одинаковые элементы
 		union(vyborka[,nomer_stolbtca_classov],vyborka[,nomer_stolbtca_classov])
 	}
 	klassy <- poluchit_klassy(Xl,nomer_stolbtca_classov) #фрейм содержащий названия классов
