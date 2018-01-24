@@ -25,8 +25,10 @@ poschitat_rasstoyanie = function(t1, t2) {#функция расстояния, 
   sqrt(sum((t1 - t2)^2))                  #как будто значения параметров являются координатами
 }
 
-otsortirovat_vyborky = function(klassyfitcyruyemyy_element,vyborka,vector_priznakov, po_ubyvaniyu = FALSE, funktciya_vesov = poschitat_rasstoyanie){
-#возвращает отсортированную выборку по возрастанию(по умолчанию подставив TRUE отсортируем по убыванию) весов(расстояний) ее элементов относительно классифицируемого элемента
+otsortirovat_vyborky = function(klassyfitcyruyemyy_element,vyborka,vector_priznakov, po_ubyvaniyu = FALSE,
+                                funktciya_vesov = poschitat_rasstoyanie){
+#возвращает отсортированную выборку по возрастанию(по умолчанию подставив TRUE отсортируем по убыванию)
+#весов(расстояний) ее элементов относительно классифицируемого элемента
   dlinna_vyborki = dim(vyborka)[1]
   matritca_rasstoyaniy = matrix(0,dlinna_vyborki,2)#содержит нули,нужна для хранения весов выборки относительно u
   for (i in 1:dlinna_vyborki) {
@@ -40,7 +42,8 @@ poluchit_klassy = function(vyborka,nomer_stolbtca_classov){#если я прав
   union(vyborka[,nomer_stolbtca_classov],vyborka[,nomer_stolbtca_classov])
 }
 
-kNN = function(klassyfitcyruyemyy_element,vyborka, vector_priznakov,nomer_stolbtca_classov,k,funktciya_rasstoyaniy=poschitat_rasstoyanie) {
+kNN = function(klassyfitcyruyemyy_element,vyborka, vector_priznakov,nomer_stolbtca_classov,k,
+               funktciya_rasstoyaniy=poschitat_rasstoyanie) {
   sortirovannaya_vyborka = otsortirovat_vyborky(klassyfitcyruyemyy_element,vyborka,vector_priznakov,FALSE,funktciya_rasstoyaniy)
   klassy = poluchit_klassy(vyborka,nomer_stolbtca_classov)
   blizost <- rep(0,times = length(klassy))
