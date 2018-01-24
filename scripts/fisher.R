@@ -41,7 +41,7 @@ for(i in 1:Ny){
     E=E+Lx[j,]%*%t(Lx[j,])
   }
 }
-E=E/(dim(Xl)[1]-1)
+E=E/(dim(Xl)[1]-length(classes))
 #вычисление альфа и бета параметров алгоритма
 a=matrix(0,Ny,n)
 b=rep(0,Ny)
