@@ -70,7 +70,8 @@ for(i in 1:l){
 
 tcveta = c("red", "green", "blue")#создает вектор цветов
 # график
-plot(Xl[,1], Xl[,2], col = tcveta[Xl[,nomer_stolbtca_classov]], xlab = "", ylab = "",main = paste("plug-in\n(error rate ",round(e,digits=2),"%)"),pch = 20)
+plot(Xl[,1], Xl[,2], col = tcveta[Xl[,nomer_stolbtca_classov]], xlab = "", ylab = "",
+     main = paste("plug-in\n(error rate ",round(e,digits=2),"%)"),pch = 20)
 #классифицируем все точки видимой области первого графика с шагом (0.1, 0.1)    
 w_min<-min(Xl[,1])-0.1
 w_max<-max(Xl[,1])+0.1
