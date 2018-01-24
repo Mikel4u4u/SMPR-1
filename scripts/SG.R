@@ -80,7 +80,8 @@ source("SG_funktcii.R")
   Ntc=function(k){
     ifelse(k==1,1,3+k)
   }
-  plot(Xl[,1], Xl[,2], col = tcveta[Ntc(Xl[,col])], xlab = "", ylab = "",main = paste("ADALINE\n(error rate ",round(e,digits=2),"%, iterations ",iteration,")"),pch = 20)
+  plot(Xl[,1], Xl[,2], col = tcveta[Ntc(Xl[,col])], xlab = "", ylab = "",
+       main = paste("ADALINE\n(error rate ",round(e,digits=2),"%, iterations ",iteration,")"),pch = 20)
   #классифицируем все точки видимой области первого графика с шагом (0.1, 0.1)    
   w_min<-min(Xl[,1])-0.1
   w_max<-max(Xl[,1])+0.1
